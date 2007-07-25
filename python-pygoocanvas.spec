@@ -3,7 +3,7 @@
 Name: python-pygoocanvas
 Summary: GooCanvas python bindings
 Version: 0.8.0
-Release: %mkrel 1
+Release: %mkrel 2
 URL: http://developer.berlios.de/projects/pygoocanvas/
 License: LGPL
 Group: Development/Python
