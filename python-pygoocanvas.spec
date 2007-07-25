@@ -9,6 +9,7 @@ License: LGPL
 Group: Development/Python
 BuildRequires: goocanvas-devel >= 0.8
 BuildRequires: pygtk2.0-devel >= 2.10.4
+BuildRequires: gnome-doc-utils
 Source: %{oname}-%{version}.tar.gz
 
 %description
@@ -29,3 +30,7 @@ rm -fr %{buildroot}
 
 %clean
 rm -fr %{buildroot}
+
+%files
+%doc %{_datadir}/gtk-doc/html/%{oname}
+%{python_sitearch}/*
