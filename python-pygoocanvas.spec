@@ -10,6 +10,7 @@ Group: Development/Python
 BuildRequires: goocanvas-devel >= 0.8
 BuildRequires: pygtk2.0-devel >= 2.10.4
 BuildRequires: gnome-doc-utils
+Provides: %{oname} = %{version}-%{release}
 Source: %{oname}-%{version}.tar.gz
 
 %description
