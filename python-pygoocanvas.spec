@@ -7,6 +7,7 @@ Release: %mkrel 1
 URL: http://developer.berlios.de/projects/pygoocanvas/
 License: LGPL
 Group: Development/Python
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: goocanvas-devel >= 0.9
 BuildRequires: pygtk2.0-devel >= 2.10.4
 BuildRequires: gnome-doc-utils
