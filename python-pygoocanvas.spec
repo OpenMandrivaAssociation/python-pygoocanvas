@@ -1,24 +1,32 @@
 %define oname pygoocanvas
 
-Name: python-pygoocanvas
+Name: python-%{oname}
 Summary: GooCanvas python bindings
-Version: 0.9.0
+Version: 0.10.0
 Release: %mkrel 1
 URL: http://developer.berlios.de/projects/pygoocanvas/
 License: LGPL
 Group: Development/Python
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: goocanvas-devel >= 0.9
+BuildRequires: goocanvas-devel >= 0.10
 BuildRequires: pygtk2.0-devel >= 2.10.4
 BuildRequires: gnome-doc-utils
 BuildRequires: docbook-style-xsl
 Provides: %{oname} = %{version}-%{release}
-Source: %{oname}-%{version}.tar.gz
+Source: http://download.berlios.de/%{oname}/%{oname}-%{version}.tar.gz
 
 %description
-This package include Python bindings for GooCanvas. It is
+This package includes Python bindings for GooCanvas. It is
 needed to run programs written in Python and using GooCanvas
 set.
+
+%package devel
+Summary: GooCanvas python bindings - Development files
+Group: Development/Python
+Requires: %name = %version
+
+%description devel
+This package includes development files of python bindings for GooCanvas.
 
 %prep
 %setup -q -n %{oname}-%{version}
@@ -38,3 +46,5 @@ rm -fr %{buildroot}
 %doc %{_datadir}/gtk-doc/html/%{oname}
 %{python_sitearch}/*
 
+%files devel
+%{_libdir}/pkgconfig/*.pc
