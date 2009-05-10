@@ -1,17 +1,19 @@
 %define oname pygoocanvas
-
+%define pycairo 1.8.4
 Name: python-%{oname}
 Summary: GooCanvas python bindings
-Version: 0.14.0
+Version: 0.14.1
 Release: %mkrel 1
 URL: http://developer.berlios.de/projects/pygoocanvas/
 License: LGPL
 Group: Development/Python
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: goocanvas-devel >= 0.13
+BuildRequires: goocanvas-devel >= 0.14
 BuildRequires: pygtk2.0-devel >= 2.10.4
+BuildRequires: python-cairo >= %pycairo
 BuildRequires: gnome-doc-utils
 BuildRequires: docbook-style-xsl
+Requires: python-cairo >= %pycairo
 Provides: %{oname} = %{version}-%{release}
 Source: http://ftp.gnome.org/pub/GNOME/sources/%{oname}/%{oname}-%{version}.tar.bz2
 
