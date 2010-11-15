@@ -3,7 +3,7 @@
 Name: python-%{oname}
 Summary: GooCanvas python bindings
 Version: 0.14.1
-Release: %mkrel 1
+Release: %mkrel 2
 URL: http://developer.berlios.de/projects/pygoocanvas/
 License: LGPL
 Group: Development/Python
@@ -16,6 +16,7 @@ BuildRequires: docbook-style-xsl
 Requires: python-cairo >= %pycairo
 Provides: %{oname} = %{version}-%{release}
 Source: http://ftp.gnome.org/pub/GNOME/sources/%{oname}/%{oname}-%{version}.tar.bz2
+Patch0: 0001-Check-the-return-value-of-PycairoContext_FromContext.patch
 
 %description
 This package includes Python bindings for GooCanvas. It is
@@ -32,6 +33,7 @@ This package includes development files of python bindings for GooCanvas.
 
 %prep
 %setup -q -n %{oname}-%{version}
+%apply_patches
 
 %build
 %configure2_5x
