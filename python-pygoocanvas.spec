@@ -3,7 +3,7 @@
 Name: python-%{oname}
 Summary: GooCanvas python bindings
 Version: 0.14.1
-Release: %mkrel 2
+Release: %mkrel 3
 URL: http://developer.berlios.de/projects/pygoocanvas/
 License: LGPL
 Group: Development/Python
