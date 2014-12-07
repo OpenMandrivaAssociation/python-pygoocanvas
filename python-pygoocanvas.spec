@@ -36,7 +36,7 @@ This package includes development files of python bindings for GooCanvas.
 %apply_patches
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
@@ -44,7 +44,7 @@ This package includes development files of python bindings for GooCanvas.
 
 %files
 %doc %{_datadir}/gtk-doc/html/%{oname}
-%{python_sitearch}/*
+%{python2_sitearch}/*
 
 %files devel
 %{_libdir}/pkgconfig/*.pc
