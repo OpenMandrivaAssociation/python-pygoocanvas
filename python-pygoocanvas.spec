@@ -4,7 +4,7 @@
 Summary:	GooCanvas python bindings
 Name:		python-%{oname}
 Version:	0.14.1
-Release:	12
+Release:	13
 License:	LGPLv2
 Group:		Development/Python
 Url:		http://developer.berlios.de/projects/pygoocanvas/
@@ -34,6 +34,7 @@ This package includes development files of python bindings for GooCanvas.
 %prep
 %setup -qn %{oname}-%{version}
 %apply_patches
+find . -name "*.py" |xargs 2to3 -w
 
 %build
 %configure
