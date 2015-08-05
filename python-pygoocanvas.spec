@@ -1,5 +1,6 @@
 %define oname pygoocanvas
 %define pycairo 1.8.4
+%define _disable_rebuild_configure 1
 
 Summary:	GooCanvas python bindings
 Name:		python-%{oname}
