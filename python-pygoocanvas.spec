@@ -15,7 +15,7 @@ BuildRequires:	gnome-doc-utils
 BuildRequires:	pkgconfig(goocanvas)
 BuildRequires:	pkgconfig(pycairo) >= %{pycairo}
 BuildRequires:	pkgconfig(pygtk-2.0)
-BuildRequires:	python3-devel
+BuildRequires:	python2-devel
 
 Requires:	python-cairo >= %{pycairo}
 Provides:	%{oname} = %{version}-%{release}
@@ -36,9 +36,11 @@ This package includes development files of python bindings for GooCanvas.
 %prep
 %setup -qn %{oname}-%{version}
 %apply_patches
-find . -name "*.py" |xargs 2to3 -w
 
 %build
+ln -s %{_bindir}/python2 python
+export PATH=`pwd`:$PATH
+
 %configure
 %make
 
