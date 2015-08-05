@@ -15,6 +15,8 @@ BuildRequires:	gnome-doc-utils
 BuildRequires:	pkgconfig(goocanvas)
 BuildRequires:	pkgconfig(pycairo) >= %{pycairo}
 BuildRequires:	pkgconfig(pygtk-2.0)
+BuildRequires:	python3-devel
+
 Requires:	python-cairo >= %{pycairo}
 Provides:	%{oname} = %{version}-%{release}
 
