@@ -1,9 +1,10 @@
 %define oname pygoocanvas
 %define pycairo 1.8.4
 %define _disable_rebuild_configure 1
+%define _disable_lto 1
 
 Summary:	GooCanvas python bindings
-Name:		python-%{oname}
+Name:		python2-%{oname}
 Version:	0.14.1
 Release:	14
 License:	LGPLv2
@@ -17,6 +18,7 @@ BuildRequires:	pkgconfig(goocanvas)
 BuildRequires:	pkgconfig(pycairo) >= %{pycairo}
 BuildRequires:	pkgconfig(pygtk-2.0)
 BuildRequires:	python2-devel
+%rename	python-%{oname}
 
 Requires:	python-cairo >= %{pycairo}
 Provides:	%{oname} = %{version}-%{release}
@@ -39,9 +41,7 @@ This package includes development files of python bindings for GooCanvas.
 %apply_patches
 
 %build
-ln -s %{_bindir}/python2 python
-export PATH=`pwd`:$PATH
-
+export PYTHON=%__python2
 %configure
 %make
 
