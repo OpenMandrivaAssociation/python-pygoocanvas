@@ -6,7 +6,7 @@
 Summary:	GooCanvas python bindings
 Name:		python2-%{oname}
 Version:	0.14.1
-Release:	14
+Release:	15
 License:	LGPLv2
 Group:		Development/Python
 Url:		http://developer.berlios.de/projects/pygoocanvas/
