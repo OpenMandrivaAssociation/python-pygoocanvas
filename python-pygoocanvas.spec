@@ -38,7 +38,7 @@ This package includes development files of python bindings for GooCanvas.
 
 %prep
 %setup -qn %{oname}-%{version}
-%apply_patches
+%autopatch -p1
 
 %build
 export PYTHON=%__python2
