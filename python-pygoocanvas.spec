@@ -9,7 +9,7 @@ Version:	0.14.1
 Release:	16
 License:	LGPLv2
 Group:		Development/Python
-Url:		http://developer.berlios.de/projects/pygoocanvas/
+Url:		https://developer.berlios.de/projects/pygoocanvas/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{oname}/%{oname}-%{version}.tar.bz2
 Patch0:		0001-Check-the-return-value-of-PycairoContext_FromContext.patch
 BuildRequires:	docbook-style-xsl
